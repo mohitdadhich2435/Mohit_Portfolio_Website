@@ -3,11 +3,20 @@
   margin: 0;
 }
 
+h1,h2,h3,h4,.logo{
+  font-family: "Playfair Display", serif;
+}
+
 .nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
   color: white;
+  z-index: 999;
   background-image: linear-gradient(to right, rgb(87, 29, 232), rgb(29, 97, 243));
 }
 
@@ -20,10 +29,6 @@
 
 .nav ul a li {
   position: relative;
-}
-
-h1,h2,h3,h4,.logo{
-  font-family: "Playfair Display", serif;
 }
 
 .nav ul a li::after{
@@ -71,7 +76,6 @@ h1,h2,h3,h4,.logo{
 
 .hero {
   min-height: 80vh;
-  /* background-image: linear-gradient(to right, #F8FAFC, #EFF6FF); */
   background: linear-gradient(135deg, #020617, #0f172a);
   display: flex;
   position: relative;
@@ -82,14 +86,6 @@ h1,h2,h3,h4,.logo{
   align-items: center;
 }
 
-/* .hero::before, .hero::after {
-  content: "";
-  position: absolute;
-  width: max-content;
-  height: 80vh;
-  background: radial-gradient(circle, #3b82f6, transparent);
-} */
-
 .hero::before{
   top:-100px;
   left: -100px;
@@ -98,7 +94,6 @@ h1,h2,h3,h4,.logo{
   bottom: -100px;
   content: "";
   position: absolute;
-  /* inset: 0; */
   background: rgba(2,6,23,0.4);
   z-index: -1;
   right: -100px;
@@ -150,19 +145,17 @@ h1,h2,h3,h4,.logo{
   font-size: 28px;
   margin-top: 6px;
   color: #1E3A8A;
-  /* margin-bottom: 20px; */
 }
 
 .hero-left p {
   font-size: 18px;
-  /* line-height: 1.6; */
   margin-top: 20px;
   color: #ffffff;
 }
 
 .hero-img img{
   position: relative;
-  transform: 5.5s ease;
+  transform: 0.5s ease;
   display: inline-block;
 }
 
@@ -170,32 +163,27 @@ h1,h2,h3,h4,.logo{
   transform: translateY(-8px) scale(1.03);
 }
 
-/* .hero-img::before{
-  content: "";
-  position: absolute;
-  inset: -15px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #6366f1, #3b82f6);
-  z-index: -1;
-} */
-
 .hero-right img {
-  width: 280px;
-  height: 340px;
+  width: 180px;
+  height: 480px;
+  width: 40vw;
+  max-width: 420px;
+  filter: drop-shadow(0 0 35px rgba(59,130,246,0.35));
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 60px;
   border-radius: 16px;
-  border: 3px solid #E5E7EB;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border: 0px solid #E5E7EB;
 }
 
+.hero-left, .hero-right{
+  position: relative;
+  z-index: 1;
+}
 
 .about {
   padding: 120px 120px;
   text-align: center;
-  /* background-color: #ffffff; */
-  /* background: linear-gradient(180deg,#ffffff,#f8fafc); */
   background: linear-gradient(180deg,#f8fafc,#ffffff);
 }
 
@@ -467,15 +455,85 @@ h1,h2,h3,h4,.logo{
 
 }
 
-.hero-left, .hero-right{
-  position: relative;
-  z-index: 1;
+@media (max-width:768px){
+  .hero{
+    /* display: block; */
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    align-items: center;
+    margin: 8vh 0vh;
+    /* grid-template-columns: row-reverse; */
+  }
+  .hero-left{
+    margin: 5vh 0;
+  }
+  .hero-left h1{
+    font-size: 32px;
+  }
+  .typing{
+    font-size: 24px;
+  }
+  .hero-right{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-img:hover{
+    transform: translateX(0) scale(1);
+  }
+  .about, .project, .skills, .resume{
+    padding: 60px 20px;
+  }
+  .project-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .skills-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-footer{
+    padding: 60px 40px;
+    justify-content: center;
+  }
+  
+  .footer-container{
+    /* display: flex; */
+    /* flex-direction: column; */
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-about{
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .footer-about p{
+    margin: auto;
+  }
+  .project-container, .skills-container, .footer-container{
+    flex-direction: column;
+  }
+  .footer-about{
+    text-align: center;
+    margin: auto;
+  }
+  .footer-links ul{
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .footer-links ul li a{
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    /* gap: 20px; */
+  }
+  .social-icons{
+    justify-content: center;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
 }
-
-/* .hero::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.5);
-  z-index: -1;
-} */
