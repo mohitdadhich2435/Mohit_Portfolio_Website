@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Henny+Penny&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,7 +18,10 @@
   <nav id="home">
     <div class="nav">
       <div class="logo">Mohit Portfolio</div>
-      <ul>
+      <button class="menu-toggle" id="menu-toggle">
+        ☰
+      </button>
+      <ul id="navbar">
         <a href="#home">
           <li>Home</li>
         </a>
@@ -66,9 +70,24 @@
     <h2>My Projects</h2>
     <div class="project-container">
       <div class="project-card">
+        <img src="student-job-portal.png" alt="XO Game Screenshot">
+        <h3>Student Job Portal With Resume Analyser</h3>
+        <p>Developed a web portal where students post jobs and resumes are matched awith job keywords to generate
+          compatibility scores.</p>
+        <a href="https://mohitdadhich2435.github.io/Student_Job_Portal/" class="btn-project">View Live</a>
+      </div>
+      <div class="project-card">
+        <img src="mood-tracker.png" alt="Calculator Screenshot">
+        <h3>Mood Tracking Web App</h3>
+        <p>Built a web app that detects user mood using facial expressions through webcam-bassed emotion detection.</p>
+        <a href="https://mohitdadhich2435.github.io/Mood-Tracker/" class="btn-project">View Live</a>
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-card">
         <img src="xo_game_poster.png" alt="XO Game Screenshot">
-        <h3>XO Game</h3>
-        <p>A Tic-Tac-Toe game built using HTML, CSS, JavaScript.</p>
+        <h3>Tic Tac Toe (XO Game)</h3>
+        <p>Created an interactive Tic Tac Toe Game with Single-player and Two-player Mode using JavaScript.</p>
         <a href="https://mohitdadhich2435.github.io/XO-Game-Project/" class="btn-project">View Live</a>
       </div>
       <div class="project-card">
@@ -132,8 +151,10 @@
         <p>📍 Kishangarh, Rajasthan, India</p>
         <div class="social-icons">
           <a href="https://github.com/mohitdadhich2435" target="_blank"><img src="gihub.svg" alt=""></a>
-          <a href="https://github.com/mohitdadhich2435" target="_blank"><img src="linkedin.svg" alt=""></a>
-          <a href="https://github.com/mohitdadhich2435" target="_blank"><img src="instagram.svg" alt=""></a>
+          <a href="https://www.linkedin.com/in/mohit-dadhich-1033902ab/" target="_blank"><img src="linkedin.svg"
+              alt=""></a>
+          <a href="https://www.instagram.com/mohit__dadhich8/?hl=en" target="_blank"><img src="instagram.svg"
+              alt=""></a>
         </div>
       </div>
     </div>
@@ -143,10 +164,10 @@
     © 2026 Mohit Dadhich | Built with using HTML, CSS, JavaScript
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="particles.js"></script>
-<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
 
 
 </body>

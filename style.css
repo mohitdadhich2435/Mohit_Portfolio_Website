@@ -61,6 +61,45 @@ h4,
   font-size: 22px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile navbar */
+
+@media (max-width:768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: linear-gradient(to right, rgb(87, 29, 232), rgb(29, 97, 243));
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  #navbar.active {
+    display: flex;
+  }
+
+  #navbar a {
+    padding: 10px 0;
+  }
+
+}
+
 /* .about, .project, .skills {
   opacity: 0;
   transform: translateY(40px);
@@ -136,6 +175,7 @@ h4,
     transform: translateY(0);
   }
 }
+
 
 .name {
   /* color: #2563eb;
@@ -571,7 +611,7 @@ h4,
   .social-icons {
     justify-content: center;
     width: 3vw;
-    gap: 2vw;   
+    gap: 2vw;
   }
 
   html {
