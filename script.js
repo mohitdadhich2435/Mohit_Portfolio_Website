@@ -3,7 +3,7 @@ const sr = ScrollReveal({
   duration: 1800,
   delay: 200,
   reset: true,
-  viewFactor: 0.2
+  viewFactor: 0.2,
 });
 sr.reveal(".about");
 sr.reveal(".project");
@@ -13,8 +13,6 @@ sr.reveal(".resume");
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
 
-menuToggle.addEventListener("click", function(){
-
-navbar.classList.toggle("active");
-
+menuToggle.addEventListener("click", function () {
+  navbar.classList.toggle("active");
 });
